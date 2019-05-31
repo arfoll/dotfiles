@@ -1,0 +1,9 @@
+out_to_console yes
+out_to_x no
+background no
+update_interval 2
+total_run_times 0
+use_spacer none
+
+TEXT
+${alignc}$nodename CPU: ${cpu}% @ ${freq}Mhz (${acpitemp}°C) | FS: ${fs_used /}/${fs_size /} | RAM: $mem | Net: ${wireless_essid wlp3s0} | IP: ${addr wlp3s0} | Bat: ${battery BAT0} | Vol: ${exec amixer get Master | egrep -o "[0-9]+%" | head -1} | ${time %a %H:%M}
